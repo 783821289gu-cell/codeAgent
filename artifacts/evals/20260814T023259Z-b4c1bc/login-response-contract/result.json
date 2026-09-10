@@ -1,0 +1,20 @@
+{
+  "id": "login-response-contract",
+  "task_id": "eval-login-response-contract-8f2a502a",
+  "success": false,
+  "outcome_status": "failed",
+  "success_command_passed": true,
+  "success_command_output": ".                                                                        [100%]\n1 passed in 0.05s",
+  "changed_files": [],
+  "expected_changed_files_match": false,
+  "forbidden_changes": [],
+  "turns": 0,
+  "tool_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "latency_seconds": 2.752125200117007,
+  "trace_id": null,
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T023259Z-b4c1bc\\login-response-contract",
+  "error": "MemoryError: "
+}

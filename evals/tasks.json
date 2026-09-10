@@ -1,0 +1,26 @@
+[
+  {
+    "id": "missing-login-user",
+    "baseline_repo": "demo/bug_repo",
+    "task": "Fix the login endpoint returning HTTP 500 for an unknown user and add a regression test.",
+    "success_command": "{python} -m pytest -q",
+    "expected_changed_files": ["app.py", "test_app.py"],
+    "forbidden_changes": ["README.md"]
+  },
+  {
+    "id": "empty-login-identifier",
+    "baseline_repo": "demo/bug_repo",
+    "task": "Make an empty login identifier return a non-500 client error and add a regression test.",
+    "success_command": "{python} -m pytest -q",
+    "expected_changed_files": ["app.py", "test_app.py"],
+    "forbidden_changes": ["README.md"]
+  },
+  {
+    "id": "login-response-contract",
+    "baseline_repo": "demo/bug_repo",
+    "task": "Add regression coverage that existing-user login remains HTTP 200 while missing-user login is a non-500 client error, and fix the implementation.",
+    "success_command": "{python} -m pytest -q",
+    "expected_changed_files": ["app.py", "test_app.py"],
+    "forbidden_changes": ["README.md"]
+  }
+]

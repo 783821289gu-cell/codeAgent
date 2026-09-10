@@ -1,0 +1,20 @@
+{
+  "id": "missing-login-user",
+  "task_id": "eval-missing-login-user-6c875335",
+  "success": false,
+  "outcome_status": "failed",
+  "success_command_passed": true,
+  "success_command_output": ".                                                                        [100%]\n1 passed in 0.05s",
+  "changed_files": [],
+  "expected_changed_files_match": false,
+  "forbidden_changes": [],
+  "turns": 0,
+  "tool_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "latency_seconds": 24.202045899815857,
+  "trace_id": null,
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T023259Z-b4c1bc\\missing-login-user",
+  "error": "ValueError: Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+}

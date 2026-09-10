@@ -1,0 +1,407 @@
+[
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:36:06.543913Z",
+    "duration_ms": 17915.563599905,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:36:27.651719Z",
+    "duration_ms": 0.04100007936358452,
+    "ok": true,
+    "details": {
+      "initial_tokens": 798,
+      "final_tokens": 814,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 18,
+        "state": 199,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:36:31.499958Z",
+    "duration_ms": 54.7263000626117,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:36:31.500446Z",
+    "duration_ms": 161.24849999323487,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:36:35.517323Z",
+    "duration_ms": 1.4788999687880278,
+    "ok": true,
+    "details": {
+      "path": ".gitignore",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:36:35.517124Z",
+    "duration_ms": 2.3253001272678375,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:36:35.517009Z",
+    "duration_ms": 2.6090999599546194,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:36:43.202529Z",
+    "duration_ms": 1036.727099912241,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:36:43.196495Z",
+    "duration_ms": 1047.0342000480741,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:36:43.216605Z",
+    "duration_ms": 1433.071999810636,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:36:43.208776Z",
+    "duration_ms": 1444.5689001586288,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:36:46.985150Z",
+    "duration_ms": 52.78209992684424,
+    "ok": true,
+    "details": {
+      "command": "pytest -q",
+      "passed": false,
+      "exit_code": 1,
+      "duration_seconds": 0.0493582000490278
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:36:49.520012Z",
+    "duration_ms": 127.12449999526143,
+    "ok": true,
+    "details": {
+      "command": "python -m pytest -q",
+      "passed": false,
+      "exit_code": 1,
+      "duration_seconds": 0.12351640011183918
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:36:54.675854Z",
+    "duration_ms": 0.11499994434416294,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:37:12.693898Z",
+    "duration_ms": 547.0485000405461,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:37:12.686171Z",
+    "duration_ms": 558.829199988395,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:37:14.904793Z",
+    "duration_ms": 247.46349989436567,
+    "ok": true,
+    "details": {
+      "command": "python test_app.py",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.24396770005114377
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:37:16.698751Z",
+    "duration_ms": 143.55979999527335,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:37:16.698870Z",
+    "duration_ms": 143.64799996837974,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:37:30.778616Z",
+    "duration_ms": 1.428399933502078,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:37:30.778858Z",
+    "duration_ms": 1.8104000482708216,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:37:30.778751Z",
+    "duration_ms": 287.79760003089905,
+    "ok": true,
+    "details": {
+      "command": "python test_app.py",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.2841789999511093
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:37:31.126989Z",
+    "duration_ms": 0.05110003985464573,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12958,
+      "final_tokens": 11112,
+      "budget_tokens": 12000,
+      "pruned_items": 6,
+      "category_tokens": {
+        "task": 18,
+        "state": 411,
+        "rag": 581,
+        "tool": 1742,
+        "test": 175
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:36:27.692751Z",
+    "duration_ms": 70526.59700019285,
+    "ok": true,
+    "details": {
+      "model_responses": 13
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "rag",
+    "name": "changed_files_index",
+    "started_at": "2026-08-14T02:37:38.222688Z",
+    "duration_ms": 5.949300015345216,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 2,
+      "processed": 0,
+      "skipped": 2,
+      "deleted": 0,
+      "chunks": 0
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "memory",
+    "name": "extract",
+    "started_at": "2026-08-14T02:37:38.231981Z",
+    "duration_ms": 69.66640008613467,
+    "ok": false,
+    "details": {
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  },
+  {
+    "trace_id": "trace_54a2d5683ee6480c8ea61f5b1695f03b",
+    "task_id": "eval-missing-login-user-4b2cca43",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:36:06.543861Z",
+    "duration_ms": 91761.1823999323,
+    "ok": false,
+    "details": {
+      "goal": "Fix the login endpoint returning HTTP 500 for an unknown user and add a regression test.",
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "metric_source": "sum of persisted local trace events where category=llm",
+  "baseline": {
+    "run_id": "demo-20260814T030127Z-5a901a",
+    "input_tokens": 101446,
+    "output_tokens": 8258,
+    "total_tokens": 109704,
+    "llm_calls": 16,
+    "tool_events": 17,
+    "phase_tokens": {
+      "explorer": 13122,
+      "reviewer": 19284,
+      "memory_extraction": 5260,
+      "main": 72038
+    }
+  },
+  "current": {
+    "run_id": "demo-20260814T065211Z-30db19",
+    "input_tokens": 62436,
+    "output_tokens": 10855,
+    "total_tokens": 73291,
+    "llm_calls": 15,
+    "tool_events": 20,
+    "phase_tokens": {
+      "main_planning": 1565,
+      "explorer": 19872,
+      "main_execution": 30733,
+      "reviewer": 17319,
+      "memory_extraction": 3802
+    }
+  },
+  "delta": {
+    "input_tokens": -39010,
+    "input_percent": -38.45,
+    "output_tokens": 2597,
+    "output_percent": 31.45,
+    "total_tokens": -36413,
+    "total_percent": -33.19,
+    "llm_calls": -1,
+    "tool_events": 3
+  },
+  "validation": {
+    "completed": true,
+    "review_approved": true,
+    "independent_tests": "3 passed in 0.04s",
+    "agent_stage_order": [
+      "main_planning",
+      "explorer",
+      "main_execution",
+      "reviewer"
+    ],
+    "trace_id": "trace_29f6a7356622419889f04aa620d97a62"
+  }
+}

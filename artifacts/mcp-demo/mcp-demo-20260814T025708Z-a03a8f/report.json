@@ -1,0 +1,45 @@
+{
+  "run_id": "mcp-demo-20260814T025708Z-a03a8f",
+  "success": true,
+  "workspace": "D:\\demo-projects\\codeAgent\\artifacts\\mcp-demo\\mcp-demo-20260814T025708Z-a03a8f\\workspace",
+  "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+  "outcome": {
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "status": "completed",
+    "summary": "## Summary\n\n**Issue 101** (source of truth): \"Unknown login user becomes HTTP 500\" — calling `login_endpoint` with a user id absent from `USERS` dereferences `None`; the fix should return a non-500 client response, preserve the existing-user HTTP 200 contract, and add regression coverage.\n\n### Root cause\n`login_endpoint` unconditionally did `user[\"name\"]` after `USERS.get(user_id)`, so an unknown id returned `None` and raised `TypeError`. `wsgi_app`'s broad `except Exception` then converted that into HTTP 500.\n\n### Changes\n- **app.py**: Added a `None` guard in `login_endpoint` that returns `HTTPStatus.NOT_FOUND` with `{\"error\": \"user not found\"}` before dereferencing. The existing-user path still returns HTTP 200.\n- **test_app.py**: Added two regression tests:\n  - `test_login_returns_404_for_unknown_user` (endpoint-level)\n  - `test_wsgi_login_unknown_returns_404` (WSGI-boundary-level, verifies 404 not 500)\n\n### Tests\n- `pytest test_app.py -q` → **3 passed, 1 warning** (the warning is an unrelated `asyncio_mode` pytest config notice, not a code issue).\n- `pytest test_app.py -q -W default` → **3 passed**; confirmed the only warning is `PytestConfigWarning: Unknown config option: asyncio_mode`.\n\n### Review outcome\nIndependent Reviewer **approved** with **no actionable findings** and no missing tests. The only note was the harmless LF/CRLF Git line-ending warning, which is not a code issue.\n\n### Changed files\n- `app.py`\n- `test_app.py`\n\n### Limitation\nNone affecting the requested change. The `asyncio_mode` warning is pre-existing and unrelated to this fix.",
+    "changed_files": [
+      "app.py",
+      "test_app.py"
+    ],
+    "tests": [
+      {
+        "command": "pytest test_app.py -q",
+        "passed": true,
+        "exit_code": 0,
+        "output": "3 passed, 1 warning in 0.07s",
+        "duration_seconds": 0.7942774000111967
+      }
+    ],
+    "review": {
+      "summary": "The change is focused and correct. login_endpoint now returns HTTP 404 with an error body for an unknown user before dereferencing user[\"name\"], and the existing-user HTTP 200 contract is preserved. Regression coverage was added both at the endpoint level (test_login_returns_404_for_unknown_user) and the WSGI boundary level (test_wsgi_login_unknown_returns_404), which is valuable because the original bug only manifested as HTTP 500 through wsgi_app. Test evidence shows 3 passed with 0 failures. The only note is a harmless LF/CRLF warning from Git's line-ending normalization, which is not a code issue. No actionable findings.",
+      "approved": true,
+      "findings": [],
+      "missing_tests": []
+    },
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c"
+  },
+  "verification_test": {
+    "command": "\"D:\\demo-projects\\codeAgent\\.venv\\Scripts\\python.exe\" -m pytest -q",
+    "passed": true,
+    "exit_code": 0,
+    "output": "3 passed in 0.03s",
+    "duration_seconds": 0.6547612999565899
+  },
+  "mcp_tools_called": [
+    "get_issue"
+  ],
+  "report_file": "D:\\demo-projects\\codeAgent\\artifacts\\mcp-demo\\mcp-demo-20260814T025708Z-a03a8f\\report.json",
+  "trace_file": "D:\\demo-projects\\codeAgent\\artifacts\\mcp-demo\\mcp-demo-20260814T025708Z-a03a8f\\trace.json",
+  "diff_file": "D:\\demo-projects\\codeAgent\\artifacts\\mcp-demo\\mcp-demo-20260814T025708Z-a03a8f\\git.diff",
+  "test_output_file": "D:\\demo-projects\\codeAgent\\artifacts\\mcp-demo\\mcp-demo-20260814T025708Z-a03a8f\\test-output.txt"
+}

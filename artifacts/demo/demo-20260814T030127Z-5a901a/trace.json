@@ -1,0 +1,489 @@
+[
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T03:01:28.112228Z",
+    "duration_ms": 16407.50700002536,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T03:01:47.765384Z",
+    "duration_ms": 0.04689977504312992,
+    "ok": true,
+    "details": {
+      "initial_tokens": 837,
+      "final_tokens": 853,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 36,
+        "state": 220,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T03:02:00.039741Z",
+    "duration_ms": 58.14579990692437,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:02:09.790565Z",
+    "duration_ms": 2.1338998340070248,
+    "ok": true,
+    "details": {
+      "path": "README.md",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:02:09.789898Z",
+    "duration_ms": 2.9827000107616186,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:02:09.789290Z",
+    "duration_ms": 3.515999997034669,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T03:02:09.788978Z",
+    "duration_ms": 49.69229991547763,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T03:02:27.080645Z",
+    "duration_ms": 58.5446001496166,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T03:02:27.080764Z",
+    "duration_ms": 58.63820016384125,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "agent",
+    "name": "explorer",
+    "started_at": "2026-08-14T03:02:49.616863Z",
+    "duration_ms": 0.016700010746717453,
+    "ok": true,
+    "details": {
+      "files": 3
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "llm",
+    "name": "explorer_usage",
+    "started_at": "2026-08-14T03:02:49.620657Z",
+    "duration_ms": 0.024300068616867065,
+    "ok": true,
+    "details": {
+      "calls": 3,
+      "input_tokens": 11864,
+      "output_tokens": 1258,
+      "total_tokens": 13122
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:03:01.142455Z",
+    "duration_ms": 1.5670000575482845,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:03:01.142310Z",
+    "duration_ms": 2.0784998778253794,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T03:03:13.331022Z",
+    "duration_ms": 975.8016001433134,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T03:03:13.316535Z",
+    "duration_ms": 994.0170999616385,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T03:03:26.053623Z",
+    "duration_ms": 400.6318999454379,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T03:03:26.047504Z",
+    "duration_ms": 410.52699997089803,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T03:03:37.736987Z",
+    "duration_ms": 822.0504999626428,
+    "ok": true,
+    "details": {
+      "command": "pytest -q",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.8181276000104845
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T03:03:47.723596Z",
+    "duration_ms": 145.3090999275446,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T03:03:47.723688Z",
+    "duration_ms": 149.50179983861744,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:04:10.731107Z",
+    "duration_ms": 1.7234999686479568,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T03:04:10.731000Z",
+    "duration_ms": 1.9988000858575106,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T03:04:10.730912Z",
+    "duration_ms": 119.2316000815481,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T03:04:53.180057Z",
+    "duration_ms": 144.1303000319749,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "agent",
+    "name": "reviewer",
+    "started_at": "2026-08-14T03:05:05.919881Z",
+    "duration_ms": 0.021600164473056793,
+    "ok": true,
+    "details": {
+      "approved": true,
+      "findings": 0
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "llm",
+    "name": "reviewer_usage",
+    "started_at": "2026-08-14T03:05:05.926753Z",
+    "duration_ms": 0.035899924114346504,
+    "ok": true,
+    "details": {
+      "calls": 3,
+      "input_tokens": 17506,
+      "output_tokens": 1778,
+      "total_tokens": 19284
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T03:05:17.108144Z",
+    "duration_ms": 554.8312000464648,
+    "ok": true,
+    "details": {
+      "command": "pytest -q",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.551735799992457
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T03:01:47.804737Z",
+    "duration_ms": 224417.99670015462,
+    "ok": true,
+    "details": {
+      "model_responses": 9
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "rag",
+    "name": "changed_files_index",
+    "started_at": "2026-08-14T03:05:32.225971Z",
+    "duration_ms": 6.452100118622184,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 2,
+      "processed": 0,
+      "skipped": 2,
+      "deleted": 0,
+      "chunks": 0
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "llm",
+    "name": "usage",
+    "started_at": "2026-08-14T03:06:50.249681Z",
+    "duration_ms": 0.029899878427386284,
+    "ok": true,
+    "details": {
+      "calls": 1,
+      "input_tokens": 1731,
+      "output_tokens": 3529,
+      "total_tokens": 5260
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "memory",
+    "name": "extract",
+    "started_at": "2026-08-14T03:05:32.235426Z",
+    "duration_ms": 79610.31659995206,
+    "ok": true,
+    "details": {
+      "candidates": 6,
+      "stored": 6,
+      "actions": [
+        "created",
+        "created",
+        "created",
+        "created",
+        "created",
+        "created"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "llm",
+    "name": "usage",
+    "started_at": "2026-08-14T03:06:51.852198Z",
+    "duration_ms": 0.034300144761800766,
+    "ok": true,
+    "details": {
+      "calls": 9,
+      "input_tokens": 70345,
+      "output_tokens": 1693,
+      "total_tokens": 72038
+    }
+  },
+  {
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295",
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T03:01:28.112174Z",
+    "duration_ms": 323743.27070009895,
+    "ok": true,
+    "details": {
+      "goal": "Fix the login endpoint returning HTTP 500 for an unknown user. Preserve the existing-user HTTP 200 contract, add focused regression tests, run tests, and obtain independent Reviewer approval.",
+      "status": "completed",
+      "current_step": "completed",
+      "changed_files": 2,
+      "tests": 2,
+      "review_approved": true
+    }
+  }
+]

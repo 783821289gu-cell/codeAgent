@@ -1,0 +1,50 @@
+{
+  "run_id": "demo-20260814T030127Z-5a901a",
+  "success": true,
+  "workspace": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T030127Z-5a901a\\workspace",
+  "task_id": "demo-20260814T030127Z-5a901a",
+  "outcome": {
+    "task_id": "demo-20260814T030127Z-5a901a",
+    "status": "completed",
+    "summary": "The fix is complete and verified.\n\n## Summary\n\n**Root cause:** `login_endpoint` used `USERS.get(user_id)` and immediately dereferenced `user[\"name\"]`. For an unknown user this returned `None`, raising `TypeError`, which `wsgi_app`'s broad `except Exception` converted to HTTP 500.\n\n**Fix (app.py):** Added a guard that returns `HTTPStatus.NOT_FOUND` with `{\"error\": \"user not found\"}` when `user is None`, while keeping the known-user path returning HTTP 200 with the same body shape.\n\n**Regression test (test_app.py):** Added `test_login_returns_not_found_for_unknown_user` asserting HTTP 404 and the error body, and left the existing `test_login_returns_existing_user` (HTTP 200 contract) unchanged.\n\n**Changed files:**\n- `app.py`\n- `test_app.py`\n\n**Test commands/results:**\n- `pytest -q` → `2 passed, 1 warning in 0.04s` (final pass)\n\n**Review outcome:** Independent Reviewer **approved** with no findings and no missing tests.\n\n**Limitations:** None. The change is focused on the login endpoint only; the WSGI boundary's generic 500 handler remains, but it no longer masks the missing-user case.",
+    "changed_files": [
+      "app.py",
+      "test_app.py"
+    ],
+    "tests": [
+      {
+        "command": "pytest -q",
+        "passed": true,
+        "exit_code": 0,
+        "output": "2 passed, 1 warning in 0.07s",
+        "duration_seconds": 0.8181276000104845
+      },
+      {
+        "command": "pytest -q",
+        "passed": true,
+        "exit_code": 0,
+        "output": "2 passed, 1 warning in 0.04s",
+        "duration_seconds": 0.551735799992457
+      }
+    ],
+    "review": {
+      "summary": "The change correctly fixes the unknown-user path. login_endpoint now guards against USERS.get returning None and returns HTTP 404 with a 'user not found' body instead of dereferencing None (which previously raised TypeError and was converted to HTTP 500 by wsgi_app's broad except). The existing 'alice' path still returns HTTP 200 with the same body shape, so the existing contract is preserved. The new regression test is focused: it asserts login_endpoint('unknown') returns HTTPStatus.NOT_FOUND with the expected error body, and the existing 200 test is untouched. Tests run cleanly (2 passed). No unintended changes beyond the two intended files; the only extra diff is a trailing blank line in test_app.py, which is harmless.",
+      "approved": true,
+      "findings": [],
+      "missing_tests": []
+    },
+    "trace_id": "trace_fb9963de48c948a1b3cece632ec16295"
+  },
+  "verification_test": {
+    "command": "\"D:\\demo-projects\\codeAgent\\.venv\\Scripts\\python.exe\" -m pytest -q",
+    "passed": true,
+    "exit_code": 0,
+    "output": "2 passed in 0.03s",
+    "duration_seconds": 0.6609656999353319
+  },
+  "mcp_tools_called": [],
+  "report_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T030127Z-5a901a\\report.json",
+  "trace_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T030127Z-5a901a\\trace.json",
+  "diff_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T030127Z-5a901a\\git.diff",
+  "test_output_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T030127Z-5a901a\\test-output.txt"
+}

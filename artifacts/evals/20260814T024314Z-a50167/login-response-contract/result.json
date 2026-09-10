@@ -1,0 +1,23 @@
+{
+  "id": "login-response-contract",
+  "task_id": "eval-login-response-contract-04067c39",
+  "success": true,
+  "outcome_status": "completed",
+  "success_command_passed": true,
+  "success_command_output": "...                                                                      [100%]\n3 passed in 0.03s",
+  "changed_files": [
+    "app.py",
+    "test_app.py"
+  ],
+  "expected_changed_files_match": true,
+  "forbidden_changes": [],
+  "turns": 8,
+  "tool_calls": 20,
+  "input_tokens": 93112,
+  "output_tokens": 6427,
+  "total_tokens": 99539,
+  "latency_seconds": 108.97612390015274,
+  "trace_id": "trace_18e0d8a159ed4c5f9e092d0cc459404e",
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T024314Z-a50167\\login-response-contract",
+  "error": null
+}

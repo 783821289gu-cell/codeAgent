@@ -1,0 +1,64 @@
+[
+  {
+    "trace_id": "trace_035efa2d20324a77b8ad205599baa0de",
+    "task_id": "eval-missing-login-user-6c875335",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:33:00.497727Z",
+    "duration_ms": 20142.284699948505,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_035efa2d20324a77b8ad205599baa0de",
+    "task_id": "eval-missing-login-user-6c875335",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:33:24.552582Z",
+    "duration_ms": 0.20150002092123032,
+    "ok": true,
+    "details": {
+      "initial_tokens": 797,
+      "final_tokens": 813,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 18,
+        "state": 198,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_035efa2d20324a77b8ad205599baa0de",
+    "task_id": "eval-missing-login-user-6c875335",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:33:24.602678Z",
+    "duration_ms": 14.698300044983625,
+    "ok": false,
+    "details": {
+      "error": "Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+    }
+  },
+  {
+    "trace_id": "trace_035efa2d20324a77b8ad205599baa0de",
+    "task_id": "eval-missing-login-user-6c875335",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:33:00.497675Z",
+    "duration_ms": 24129.653399810195,
+    "ok": false,
+    "details": {
+      "goal": "Fix the login endpoint returning HTTP 500 for an unknown user and add a regression test.",
+      "error": "Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+    }
+  }
+]

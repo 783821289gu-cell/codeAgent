@@ -1,0 +1,27 @@
+[
+  {
+    "trace_id": "trace_ba99aa41996c4524a5e89558bbcee97d",
+    "task_id": "eval-login-response-contract-8f2a502a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:33:36.909769Z",
+    "duration_ms": 2706.7483998835087,
+    "ok": false,
+    "details": {
+      "error": ""
+    }
+  },
+  {
+    "trace_id": "trace_ba99aa41996c4524a5e89558bbcee97d",
+    "task_id": "eval-login-response-contract-8f2a502a",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:33:36.909728Z",
+    "duration_ms": 2721.6035001911223,
+    "ok": false,
+    "details": {
+      "goal": "Add regression coverage that existing-user login remains HTTP 200 while missing-user login is a non-500 client error, and fix the implementation.",
+      "error": ""
+    }
+  }
+]

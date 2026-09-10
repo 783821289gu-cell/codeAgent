@@ -1,0 +1,36 @@
+diff --git a/app.py b/app.py
+index c961a28..cf95396 100644
+--- a/app.py
++++ b/app.py
+@@ -22,7 +22,11 @@ def login_endpoint(user_id: str) -> Response:
+     """Return public login profile data for an existing user."""
+ 
+     user = USERS.get(user_id)
+-    # Deliberate demo bug: an unknown user is dereferenced and becomes HTTP 500 in wsgi_app.
++    if user is None:
++        return Response(
++            status=HTTPStatus.NOT_FOUND,
++            body={"error": "user not found"},
++        )
+     return Response(status=HTTPStatus.OK, body={"id": user_id, "name": user["name"]})
+ 
+ 
+diff --git a/test_app.py b/test_app.py
+index 6fa252f..2d3fddc 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -9,3 +9,10 @@ def test_login_returns_existing_user() -> None:
+     assert response.status == HTTPStatus.OK
+     assert response.body == {"id": "alice", "name": "Alice"}
+ 
++
++def test_login_returns_not_found_for_unknown_user() -> None:
++    response = login_endpoint("unknown")
++
++    assert response.status == HTTPStatus.NOT_FOUND
++    assert response.body == {"error": "user not found"}
++
+
+STDERR:
+warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test_app.py', LF will be replaced by CRLF the next time Git touches it

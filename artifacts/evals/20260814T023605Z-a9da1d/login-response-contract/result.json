@@ -1,0 +1,23 @@
+{
+  "id": "login-response-contract",
+  "task_id": "eval-login-response-contract-a6158496",
+  "success": false,
+  "outcome_status": "failed",
+  "success_command_passed": true,
+  "success_command_output": "..                                                                       [100%]\n2 passed in 0.04s",
+  "changed_files": [
+    "app.py",
+    "test_app.py"
+  ],
+  "expected_changed_files_match": true,
+  "forbidden_changes": [],
+  "turns": 20,
+  "tool_calls": 23,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "latency_seconds": 145.21623430005275,
+  "trace_id": null,
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T023605Z-a9da1d\\login-response-contract",
+  "error": "BadRequestError: Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+}

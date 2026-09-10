@@ -1,0 +1,43 @@
+{
+  "run_id": "demo-20260814T065211Z-30db19",
+  "success": true,
+  "workspace": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T065211Z-30db19\\workspace",
+  "task_id": "demo-20260814T065211Z-30db19",
+  "outcome": {
+    "task_id": "demo-20260814T065211Z-30db19",
+    "status": "completed",
+    "summary": "## Summary\n\nFixed the login endpoint so an unknown user no longer surfaces as HTTP 500.\n\n**Root cause:** `login_endpoint` dereferenced `user[\"name\"]` without a `None` guard; `USERS.get()` returns `None` for unknown IDs, raising `TypeError`, which `wsgi_app` converted into HTTP 500.\n\n**Fix:** Added a focused guard that returns `404 Not Found` with `{\"error\": \"user not found\"}` for unknown users. The existing-user path is untouched and still returns `200 OK` with `{\"id\": ..., \"name\": ...}`.\n\n## Changed files\n\n- `app.py` — added missing `None` guard in `login_endpoint`.\n- `test_app.py` — added regression tests:\n  - `test_login_unknown_user_returns_not_found`\n  - `test_wsgi_app_unknown_user_does_not_return_500`\n\n## Tests\n\nCommand: `python -m pytest -q`\n\nResult: `3 passed, 1 warning in 0.08s`\n\nThis includes the original existing-user 200 test plus the two new unknown-user regression tests.\n\n## Review outcome\n\nIndependent Reviewer has not run yet (`review_status: not_run`); no findings to address at this point.\n\n## Limitation\n\nThe repo did not document an explicit unknown-user status code. I chose `404 Not Found` as the most natural missing-resource contract, per the exploration findings. If the client contract instead requires `401 Unauthorized` (or another non-500 status), that is a one-line status/body adjustment.",
+    "changed_files": [
+      "app.py",
+      "test_app.py"
+    ],
+    "tests": [
+      {
+        "command": "python -m pytest -q",
+        "passed": true,
+        "exit_code": 0,
+        "output": "3 passed, 1 warning in 0.08s",
+        "duration_seconds": 0.9309806998353451
+      }
+    ],
+    "review": {
+      "summary": "The change correctly fixes the unknown-user 500 by returning a 404 Response with a JSON error body instead of dereferencing a missing user. The existing-user 200 path is preserved, focused regression tests cover both the endpoint-level 404 and the WSGI-level absence of 500, and the full test suite passes (3 passed). No regressions or contract violations found.",
+      "approved": true,
+      "findings": [],
+      "missing_tests": []
+    },
+    "trace_id": "trace_29f6a7356622419889f04aa620d97a62"
+  },
+  "verification_test": {
+    "command": "\"D:\\demo-projects\\codeAgent\\.venv\\Scripts\\python.exe\" -m pytest -q",
+    "passed": true,
+    "exit_code": 0,
+    "output": "3 passed in 0.04s",
+    "duration_seconds": 0.8150271999184042
+  },
+  "mcp_tools_called": [],
+  "report_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T065211Z-30db19\\report.json",
+  "trace_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T065211Z-30db19\\trace.json",
+  "diff_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T065211Z-30db19\\git.diff",
+  "test_output_file": "D:\\demo-projects\\codeAgent\\artifacts\\demo\\demo-20260814T065211Z-30db19\\test-output.txt"
+}

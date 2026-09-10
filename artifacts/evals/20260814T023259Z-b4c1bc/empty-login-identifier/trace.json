@@ -1,0 +1,64 @@
+[
+  {
+    "trace_id": "trace_4a51baff8c1e4b6aa78797eecf467529",
+    "task_id": "eval-empty-login-identifier-b3ccc692",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:33:25.929920Z",
+    "duration_ms": 6271.623000036925,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_4a51baff8c1e4b6aa78797eecf467529",
+    "task_id": "eval-empty-login-identifier-b3ccc692",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:33:35.724386Z",
+    "duration_ms": 0.05119992420077324,
+    "ok": true,
+    "details": {
+      "initial_tokens": 796,
+      "final_tokens": 812,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 18,
+        "state": 197,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_4a51baff8c1e4b6aa78797eecf467529",
+    "task_id": "eval-empty-login-identifier-b3ccc692",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:33:35.776058Z",
+    "duration_ms": 15.531100099906325,
+    "ok": false,
+    "details": {
+      "error": "Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+    }
+  },
+  {
+    "trace_id": "trace_4a51baff8c1e4b6aa78797eecf467529",
+    "task_id": "eval-empty-login-identifier-b3ccc692",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:33:25.929861Z",
+    "duration_ms": 9871.735000051558,
+    "ok": false,
+    "details": {
+      "goal": "Make an empty login identifier return a non-500 client error and add a regression test.",
+      "error": "Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+    }
+  }
+]

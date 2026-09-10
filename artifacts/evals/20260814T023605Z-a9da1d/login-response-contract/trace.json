@@ -1,0 +1,650 @@
+[
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:39:23.103809Z",
+    "duration_ms": 2883.8210999965668,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:39:27.161283Z",
+    "duration_ms": 0.05039991810917854,
+    "ok": true,
+    "details": {
+      "initial_tokens": 815,
+      "final_tokens": 831,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 28,
+        "state": 206,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:39:30.362449Z",
+    "duration_ms": 2.5677999947220087,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:39:30.363011Z",
+    "duration_ms": 2.135099843144417,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:39:30.362923Z",
+    "duration_ms": 2.3002999369055033,
+    "ok": true,
+    "details": {
+      "path": "README.md",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:39:30.362316Z",
+    "duration_ms": 46.428400091826916,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:39:41.099365Z",
+    "duration_ms": 1083.183400100097,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:39:41.088313Z",
+    "duration_ms": 1099.5453998912126,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:39:41.112838Z",
+    "duration_ms": 1474.5656000450253,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:39:41.104319Z",
+    "duration_ms": 1486.4348000846803,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:39:44.634832Z",
+    "duration_ms": 72.43470009416342,
+    "ok": true,
+    "details": {
+      "command": "pytest -q",
+      "passed": false,
+      "exit_code": 1,
+      "duration_seconds": 0.06819749996066093
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:39:46.673004Z",
+    "duration_ms": 125.14509982429445,
+    "ok": true,
+    "details": {
+      "command": "python -m pytest -q",
+      "passed": false,
+      "exit_code": 1,
+      "duration_seconds": 0.12180269998498261
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:39:50.968036Z",
+    "duration_ms": 0.10750000365078449,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:39:58.457964Z",
+    "duration_ms": 0.0971001572906971,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:07.097420Z",
+    "duration_ms": 145.12569992803037,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:13.517338Z",
+    "duration_ms": 191.98559992946684,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:23.430062Z",
+    "duration_ms": 74.84890008345246,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:26.381019Z",
+    "duration_ms": 0.11550006456673145,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:53.890106Z",
+    "duration_ms": 76.5998000279069,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:40:54.020079Z",
+    "duration_ms": 0.057499855756759644,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12229,
+      "final_tokens": 11423,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1154,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:40:55.796362Z",
+    "duration_ms": 159.11550004966557,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:40:56.028037Z",
+    "duration_ms": 0.056099845096468925,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12504,
+      "final_tokens": 11593,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1180,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:41:05.313111Z",
+    "duration_ms": 324.962800135836,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:05.728810Z",
+    "duration_ms": 0.07099984213709831,
+    "ok": true,
+    "details": {
+      "initial_tokens": 13309,
+      "final_tokens": 11381,
+      "budget_tokens": 12000,
+      "pruned_items": 6,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1212,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:41:07.940692Z",
+    "duration_ms": 160.93250014819205,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:41:07.940587Z",
+    "duration_ms": 165.36179999820888,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:08.189139Z",
+    "duration_ms": 0.059300102293491364,
+    "ok": true,
+    "details": {
+      "initial_tokens": 14225,
+      "final_tokens": 11248,
+      "budget_tokens": 12000,
+      "pruned_items": 8,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1700,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:15.092143Z",
+    "duration_ms": 0.04760012961924076,
+    "ok": true,
+    "details": {
+      "initial_tokens": 14884,
+      "final_tokens": 11744,
+      "budget_tokens": 12000,
+      "pruned_items": 9,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1700,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:18.301015Z",
+    "duration_ms": 0.050900038331747055,
+    "ok": true,
+    "details": {
+      "initial_tokens": 15192,
+      "final_tokens": 10538,
+      "budget_tokens": 12000,
+      "pruned_items": 10,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1700,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:41:25.961819Z",
+    "duration_ms": 180.46539998613298,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:26.233062Z",
+    "duration_ms": 0.0420999713242054,
+    "ok": true,
+    "details": {
+      "initial_tokens": 15929,
+      "final_tokens": 11378,
+      "budget_tokens": 12000,
+      "pruned_items": 10,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1763,
+        "test": 105
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:41:37.841800Z",
+    "duration_ms": 230.7994000148028,
+    "ok": true,
+    "details": {
+      "command": "python -c \"print((lambda m: (m.test_login_returns_existing_user(), m.test_login_returns_client_error_for_missing_user(), 'PASS'))(__import__('test_app')))\"",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.22661180002614856
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:38.175765Z",
+    "duration_ms": 0.04360009916126728,
+    "ok": true,
+    "details": {
+      "initial_tokens": 16941,
+      "final_tokens": 11509,
+      "budget_tokens": 12000,
+      "pruned_items": 12,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 1763,
+        "test": 178
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:41:40.119608Z",
+    "duration_ms": 130.8866001199931,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:41:40.397566Z",
+    "duration_ms": 0.05759997293353081,
+    "ok": true,
+    "details": {
+      "initial_tokens": 18191,
+      "final_tokens": 11749,
+      "budget_tokens": 12000,
+      "pruned_items": 16,
+      "category_tokens": {
+        "task": 28,
+        "state": 425,
+        "rag": 581,
+        "tool": 2169,
+        "test": 178
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:39:27.204921Z",
+    "duration_ms": 140926.23779992573,
+    "ok": true,
+    "details": {
+      "model_responses": 20
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "rag",
+    "name": "changed_files_index",
+    "started_at": "2026-08-14T02:41:48.135406Z",
+    "duration_ms": 7.494700141251087,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 2,
+      "processed": 0,
+      "skipped": 2,
+      "deleted": 0,
+      "chunks": 0
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "memory",
+    "name": "extract",
+    "started_at": "2026-08-14T02:41:48.146333Z",
+    "duration_ms": 152.79720001854002,
+    "ok": false,
+    "details": {
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  },
+  {
+    "trace_id": "trace_c96aee6597344dd3b658bc9e8b8909e4",
+    "task_id": "eval-login-response-contract-a6158496",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:39:23.103771Z",
+    "duration_ms": 145198.7052001059,
+    "ok": false,
+    "details": {
+      "goal": "Add regression coverage that existing-user login remains HTTP 200 while missing-user login is a non-500 client error, and fix the implementation.",
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  }
+]

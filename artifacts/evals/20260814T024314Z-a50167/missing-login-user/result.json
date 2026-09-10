@@ -1,0 +1,23 @@
+{
+  "id": "missing-login-user",
+  "task_id": "eval-missing-login-user-4c130480",
+  "success": true,
+  "outcome_status": "completed",
+  "success_command_passed": true,
+  "success_command_output": "..                                                                       [100%]\n2 passed in 0.04s",
+  "changed_files": [
+    "app.py",
+    "test_app.py"
+  ],
+  "expected_changed_files_match": true,
+  "forbidden_changes": [],
+  "turns": 13,
+  "tool_calls": 27,
+  "input_tokens": 140396,
+  "output_tokens": 8455,
+  "total_tokens": 148851,
+  "latency_seconds": 170.79441390000284,
+  "trace_id": "trace_7f239121dd4542839850520ea1cb2f84",
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T024314Z-a50167\\missing-login-user",
+  "error": null
+}

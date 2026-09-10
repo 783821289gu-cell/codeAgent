@@ -1,0 +1,692 @@
+[
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:57:09.634547Z",
+    "duration_ms": 18166.8287999928,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:57:31.497102Z",
+    "duration_ms": 0.05250005051493645,
+    "ok": true,
+    "details": {
+      "initial_tokens": 855,
+      "final_tokens": 871,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 44,
+        "state": 230,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:57:37.771156Z",
+    "duration_ms": 68.35189997218549,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "mcp",
+    "name": "get_issue",
+    "started_at": "2026-08-14T02:57:37.878539Z",
+    "duration_ms": 0.034800032153725624,
+    "ok": true,
+    "details": {
+      "server": "Issue MCP",
+      "call_id": "call_00_oetDESjwU3Dhj4DhyEs43024",
+      "result_tokens": 118,
+      "result_excerpt": "{'type': 'text', 'text': '{\\n  \"number\": 101,\\n  \"title\": \"Unknown login user becomes HTTP 500\",\\n  \"body\": \"Calling login_endpoint with a user id absent from USERS dereferences None. Return a non-500 client response, preserve the existing-user HTTP 200 contract, and add regression coverage.\",\\n  \"labels\": [\\n    \"bug\",\\n    \"login\",\\n    \"regression-test\"\\n  ],\\n  \"state\": \"open\"\\n}'}"
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:45.277504Z",
+    "duration_ms": 4.1166001465171576,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:45.278162Z",
+    "duration_ms": 3.388799959793687,
+    "ok": true,
+    "details": {
+      "path": "README.md",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:45.277118Z",
+    "duration_ms": 5.331400083377957,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:51.247521Z",
+    "duration_ms": 2.1667000837624073,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:51.247800Z",
+    "duration_ms": 2.440100070089102,
+    "ok": true,
+    "details": {
+      "path": "README.md",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:57:51.247634Z",
+    "duration_ms": 2.5203002151101828,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:57:51.247391Z",
+    "duration_ms": 50.98029994405806,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T02:57:56.241579Z",
+    "duration_ms": 53.86929982341826,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T02:57:56.241466Z",
+    "duration_ms": 58.39080014266074,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T02:58:09.974147Z",
+    "duration_ms": 58.02679993212223,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "search_code",
+    "started_at": "2026-08-14T02:58:09.972999Z",
+    "duration_ms": 60.16879994422197,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:58:14.239415Z",
+    "duration_ms": 1.5463000163435936,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:58:14.239511Z",
+    "duration_ms": 1.779200043529272,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:58:14.239316Z",
+    "duration_ms": 48.228400060907006,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:58:19.385868Z",
+    "duration_ms": 1.3968001585453749,
+    "ok": true,
+    "details": {
+      "path": "README.md",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "agent",
+    "name": "explorer",
+    "started_at": "2026-08-14T02:58:29.318705Z",
+    "duration_ms": 0.01650000922381878,
+    "ok": true,
+    "details": {
+      "files": 3
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "llm",
+    "name": "explorer_usage",
+    "started_at": "2026-08-14T02:58:29.325696Z",
+    "duration_ms": 0.023999949917197227,
+    "ok": true,
+    "details": {
+      "calls": 3,
+      "input_tokens": 12743,
+      "output_tokens": 1116,
+      "total_tokens": 13859
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:58:51.637785Z",
+    "duration_ms": 994.1489999182522,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:58:51.631069Z",
+    "duration_ms": 1005.7029000017792,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:58:51.653130Z",
+    "duration_ms": 1668.967799982056,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:58:51.642796Z",
+    "duration_ms": 1684.5154000911862,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:58:54.476657Z",
+    "duration_ms": 798.1489000376314,
+    "ok": true,
+    "details": {
+      "command": "pytest test_app.py -q",
+      "passed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.7942774000111967
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:58:59.850759Z",
+    "duration_ms": 156.12199995666742,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:58:59.850852Z",
+    "duration_ms": 156.61070006899536,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:58:59.850928Z",
+    "duration_ms": 615.0277000851929,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:59:00.511301Z",
+    "duration_ms": 0.031499890610575676,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12400,
+      "final_tokens": 11804,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 44,
+        "state": 491,
+        "rag": 581,
+        "tool": 4305,
+        "explorer": 496,
+        "test": 46
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:59:07.984180Z",
+    "duration_ms": 2.176400041207671,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:59:07.984287Z",
+    "duration_ms": 1.8853999208658934,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:59:07.984081Z",
+    "duration_ms": 118.18660004064441,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:59:16.844495Z",
+    "duration_ms": 119.05420012772083,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "agent",
+    "name": "reviewer",
+    "started_at": "2026-08-14T02:59:20.704386Z",
+    "duration_ms": 0.017300015315413475,
+    "ok": true,
+    "details": {
+      "approved": true,
+      "findings": 0
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "llm",
+    "name": "reviewer_usage",
+    "started_at": "2026-08-14T02:59:20.711524Z",
+    "duration_ms": 0.03760005347430706,
+    "ok": true,
+    "details": {
+      "calls": 3,
+      "input_tokens": 16763,
+      "output_tokens": 799,
+      "total_tokens": 17562
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:59:20.765708Z",
+    "duration_ms": 0.03260001540184021,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12873,
+      "final_tokens": 10813,
+      "budget_tokens": 12000,
+      "pruned_items": 4,
+      "category_tokens": {
+        "task": 44,
+        "state": 489,
+        "rag": 581,
+        "tool": 5818,
+        "explorer": 496,
+        "test": 46,
+        "reviewer": 150
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "memory",
+    "name": "save",
+    "started_at": "2026-08-14T02:59:27.717372Z",
+    "duration_ms": 432.99739994108677,
+    "ok": true,
+    "details": {
+      "kind": "reusable_experience"
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:59:28.225482Z",
+    "duration_ms": 0.03809994086623192,
+    "ok": true,
+    "details": {
+      "initial_tokens": 13505,
+      "final_tokens": 11445,
+      "budget_tokens": 12000,
+      "pruned_items": 4,
+      "category_tokens": {
+        "task": 44,
+        "state": 489,
+        "rag": 581,
+        "tool": 5818,
+        "explorer": 496,
+        "test": 46,
+        "reviewer": 150
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:57:33.121092Z",
+    "duration_ms": 122164.15010020137,
+    "ok": true,
+    "details": {
+      "model_responses": 9
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "rag",
+    "name": "changed_files_index",
+    "started_at": "2026-08-14T02:59:35.429953Z",
+    "duration_ms": 5.987500073388219,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 2,
+      "processed": 0,
+      "skipped": 2,
+      "deleted": 0,
+      "chunks": 0
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "llm",
+    "name": "usage",
+    "started_at": "2026-08-14T03:00:26.596485Z",
+    "duration_ms": 0.023399945348501205,
+    "ok": true,
+    "details": {
+      "calls": 1,
+      "input_tokens": 1807,
+      "output_tokens": 2542,
+      "total_tokens": 4349
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "memory",
+    "name": "extract",
+    "started_at": "2026-08-14T02:59:35.438812Z",
+    "duration_ms": 52912.51830011606,
+    "ok": true,
+    "details": {
+      "candidates": 6,
+      "stored": 6,
+      "actions": [
+        "created",
+        "created",
+        "created",
+        "created",
+        "created",
+        "created"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "llm",
+    "name": "usage",
+    "started_at": "2026-08-14T03:00:28.357587Z",
+    "duration_ms": 0.02819998189806938,
+    "ok": true,
+    "details": {
+      "calls": 9,
+      "input_tokens": 84329,
+      "output_tokens": 4057,
+      "total_tokens": 88386
+    }
+  },
+  {
+    "trace_id": "trace_32874148317c45b5bf3c2888d711f74c",
+    "task_id": "mcp-demo-20260814T025708Z-a03a8f",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:57:09.634495Z",
+    "duration_ms": 198726.49369994178,
+    "ok": true,
+    "details": {
+      "goal": "First call the get_issue MCP tool with issue_number 101 and use that issue as the source of truth. Then explore the repository, implement the focused fix and regression tests, run tests, and obtain independent Reviewer approval.",
+      "status": "completed",
+      "current_step": "completed",
+      "changed_files": 2,
+      "tests": 1,
+      "review_approved": true
+    }
+  }
+]

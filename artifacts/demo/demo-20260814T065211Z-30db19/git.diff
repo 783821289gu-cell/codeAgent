@@ -1,0 +1,55 @@
+diff --git a/app.py b/app.py
+index c961a28..ed48e26 100644
+--- a/app.py
++++ b/app.py
+@@ -22,7 +22,8 @@ def login_endpoint(user_id: str) -> Response:
+     """Return public login profile data for an existing user."""
+ 
+     user = USERS.get(user_id)
+-    # Deliberate demo bug: an unknown user is dereferenced and becomes HTTP 500 in wsgi_app.
++    if user is None:
++        return Response(status=HTTPStatus.NOT_FOUND, body={"error": "user not found"})
+     return Response(status=HTTPStatus.OK, body={"id": user_id, "name": user["name"]})
+ 
+ 
+diff --git a/test_app.py b/test_app.py
+index 6fa252f..4b5da05 100644
+--- a/test_app.py
++++ b/test_app.py
+@@ -1,6 +1,6 @@
+ from http import HTTPStatus
+ 
+-from app import login_endpoint
++from app import login_endpoint, wsgi_app
+ 
+ 
+ def test_login_returns_existing_user() -> None:
+@@ -9,3 +9,24 @@ def test_login_returns_existing_user() -> None:
+     assert response.status == HTTPStatus.OK
+     assert response.body == {"id": "alice", "name": "Alice"}
+ 
++
++def test_login_unknown_user_returns_not_found() -> None:
++    response = login_endpoint("unknown")
++
++    assert response.status == HTTPStatus.NOT_FOUND
++    assert response.body == {"error": "user not found"}
++
++
++def test_wsgi_app_unknown_user_does_not_return_500() -> None:
++    captured: dict[str, object] = {}
++
++    def start_response(status: str, headers: list[tuple[str, str]]) -> None:
++        captured["status"] = status
++        captured["headers"] = headers
++
++    body = wsgi_app({"PATH_INFO": "/login/unknown"}, start_response)
++
++    assert captured["status"] == "404 Not Found"
++    assert body == [b'{"error": "user not found"}']
++    assert captured["headers"] == [("Content-Type", "application/json")]
++
+
+STDERR:
+warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'test_app.py', LF will be replaced by CRLF the next time Git touches it

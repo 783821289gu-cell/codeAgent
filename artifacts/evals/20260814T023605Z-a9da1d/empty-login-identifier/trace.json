@@ -1,0 +1,467 @@
+[
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:37:39.351160Z",
+    "duration_ms": 2894.5192999672145,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 3,
+      "processed": 3,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 3
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "context",
+    "name": "initial_context_budget",
+    "started_at": "2026-08-14T02:37:43.339126Z",
+    "duration_ms": 0.05270005203783512,
+    "ok": true,
+    "details": {
+      "initial_tokens": 799,
+      "final_tokens": 815,
+      "budget_tokens": 12000,
+      "category_tokens": {
+        "task": 18,
+        "state": 200,
+        "rag": 581
+      },
+      "reduction_trace": []
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:37:46.226876Z",
+    "duration_ms": 1.4304001815617085,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "read_file",
+    "started_at": "2026-08-14T02:37:46.226971Z",
+    "duration_ms": 1.9737998954951763,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "list_files",
+    "started_at": "2026-08-14T02:37:46.226748Z",
+    "duration_ms": 46.3727000169456,
+    "ok": true,
+    "details": {
+      "path": ".",
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:38:11.396271Z",
+    "duration_ms": 1123.6392001155764,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:38:11.387260Z",
+    "duration_ms": 1139.3488999456167,
+    "ok": true,
+    "details": {
+      "path": "app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "rag",
+    "name": "incremental_index",
+    "started_at": "2026-08-14T02:38:11.410379Z",
+    "duration_ms": 1516.09419984743,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "files": 3,
+      "scanned": 1,
+      "processed": 1,
+      "skipped": 0,
+      "deleted": 0,
+      "chunks": 1
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "replace_text",
+    "started_at": "2026-08-14T02:38:11.402432Z",
+    "duration_ms": 1527.4469000287354,
+    "ok": true,
+    "details": {
+      "path": "test_app.py",
+      "ok": true
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "test",
+    "name": "run_tests",
+    "started_at": "2026-08-14T02:38:14.988557Z",
+    "duration_ms": 52.67600016668439,
+    "ok": true,
+    "details": {
+      "command": "pytest -q",
+      "passed": false,
+      "exit_code": 1,
+      "duration_seconds": 0.0494395000860095
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:17.182781Z",
+    "duration_ms": 0.2862000837922096,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:20.397081Z",
+    "duration_ms": 74.76070011034608,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:20.397174Z",
+    "duration_ms": 129.8379001673311,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": 1
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:24.797893Z",
+    "duration_ms": 0.07580011151731014,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:42.325906Z",
+    "duration_ms": 0.10020006448030472,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:50.373743Z",
+    "duration_ms": 0.07890001870691776,
+    "ok": true,
+    "details": {
+      "ok": false,
+      "exit_code": null
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:55.269173Z",
+    "duration_ms": 196.46440003998578,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:55.269394Z",
+    "duration_ms": 239.1938001383096,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "run_shell",
+    "started_at": "2026-08-14T02:38:55.269280Z",
+    "duration_ms": 241.21730006299913,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "exit_code": 0
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "git_status",
+    "started_at": "2026-08-14T02:38:57.507441Z",
+    "duration_ms": 148.18900008685887,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "tool",
+    "name": "git_diff",
+    "started_at": "2026-08-14T02:38:57.507340Z",
+    "duration_ms": 148.63709989003837,
+    "ok": true,
+    "details": {
+      "ok": true,
+      "truncated": false
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:38:57.704527Z",
+    "duration_ms": 0.04069996066391468,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12542,
+      "final_tokens": 10602,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 18,
+        "state": 413,
+        "rag": 581,
+        "tool": 1523,
+        "test": 55
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:39:01.524565Z",
+    "duration_ms": 0.04509999416768551,
+    "ok": true,
+    "details": {
+      "initial_tokens": 12919,
+      "final_tokens": 10979,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 18,
+        "state": 413,
+        "rag": 581,
+        "tool": 1523,
+        "test": 55
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:39:03.284771Z",
+    "duration_ms": 0.038899946957826614,
+    "ok": true,
+    "details": {
+      "initial_tokens": 13209,
+      "final_tokens": 11238,
+      "budget_tokens": 12000,
+      "pruned_items": 2,
+      "category_tokens": {
+        "task": 18,
+        "state": 413,
+        "rag": 581,
+        "tool": 1523,
+        "test": 55
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "memory",
+    "name": "save",
+    "started_at": "2026-08-14T02:39:15.303711Z",
+    "duration_ms": 468.36629998870194,
+    "ok": true,
+    "details": {
+      "kind": "reusable_experience"
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "context",
+    "name": "model_input_pruned",
+    "started_at": "2026-08-14T02:39:15.857987Z",
+    "duration_ms": 0.057800207287073135,
+    "ok": true,
+    "details": {
+      "initial_tokens": 14235,
+      "final_tokens": 11654,
+      "budget_tokens": 12000,
+      "pruned_items": 6,
+      "category_tokens": {
+        "task": 18,
+        "state": 413,
+        "rag": 581,
+        "tool": 1523,
+        "test": 55
+      },
+      "reduction_trace": [
+        "pruned_old_history_items"
+      ]
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "agent",
+    "name": "main",
+    "started_at": "2026-08-14T02:37:43.384884Z",
+    "duration_ms": 98775.87120002136,
+    "ok": true,
+    "details": {
+      "model_responses": 14
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "rag",
+    "name": "changed_files_index",
+    "started_at": "2026-08-14T02:39:22.163952Z",
+    "duration_ms": 6.057700142264366,
+    "ok": true,
+    "details": {
+      "files": 3,
+      "scanned": 2,
+      "processed": 0,
+      "skipped": 2,
+      "deleted": 0,
+      "chunks": 0
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "memory",
+    "name": "extract",
+    "started_at": "2026-08-14T02:39:22.173205Z",
+    "duration_ms": 56.83859996497631,
+    "ok": false,
+    "details": {
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  },
+  {
+    "trace_id": "trace_f3231368c4734f7a94343d99e2e9fa11",
+    "task_id": "eval-empty-login-identifier-e8d8d73a",
+    "category": "application",
+    "name": "task",
+    "started_at": "2026-08-14T02:37:39.351118Z",
+    "duration_ms": 102882.41469999775,
+    "ok": false,
+    "details": {
+      "goal": "Make an empty login identifier return a non-500 client error and add a regression test.",
+      "error": "Error code: 400 - {'error': {'message': 'This response_format type is unavailable now', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_request_error'}}"
+    }
+  }
+]

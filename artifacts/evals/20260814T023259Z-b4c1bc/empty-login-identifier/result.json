@@ -1,0 +1,20 @@
+{
+  "id": "empty-login-identifier",
+  "task_id": "eval-empty-login-identifier-b3ccc692",
+  "success": false,
+  "outcome_status": "failed",
+  "success_command_passed": true,
+  "success_command_output": ".                                                                        [100%]\n1 passed in 0.04s",
+  "changed_files": [],
+  "expected_changed_files_match": false,
+  "forbidden_changes": [],
+  "turns": 0,
+  "tool_calls": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "latency_seconds": 9.903237199876457,
+  "trace_id": null,
+  "artifact_dir": "D:\\demo-projects\\codeAgent\\artifacts\\evals\\20260814T023259Z-b4c1bc\\empty-login-identifier",
+  "error": "ValueError: Unsupported model for OpenAI responses compaction: deepseek-v4-pro"
+}
