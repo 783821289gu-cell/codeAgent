@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import shutil
 import sys
 from collections.abc import Callable
 from datetime import UTC, datetime
@@ -13,6 +12,7 @@ from pydantic import BaseModel, Field
 from repopilot.application.workflow import RepoPilot
 from repopilot.core.config import Settings
 from repopilot.core.models import TaskOutcome, TaskStatus, TestResult
+from repopilot.interfaces.workspace import prepare_workspace
 from repopilot.repository.tools import WorkspaceTools
 
 
@@ -55,11 +55,7 @@ class DemoRunner:
         run_id = name + "-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ") + "-" + uuid4().hex[:6]
         run_dir = self.output_dir / run_id
         workspace = run_dir / "workspace"
-        shutil.copytree(
-            self.baseline_repo,
-            workspace,
-            ignore=shutil.ignore_patterns(".repopilot", ".pytest_cache", "__pycache__"),
-        )
+        prepare_workspace(self.baseline_repo, workspace)
         settings = self.settings_factory(workspace)
         pilot = RepoPilot(settings)
         task_id = run_id

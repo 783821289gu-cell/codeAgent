@@ -1,5 +1,19 @@
 # RepoPilot
 
+面向真实代码仓库的 Multi-Agent Coding Agent 工程演示：固定 Main Planning → Explorer →
+Main Execution / Test Repair → Reviewer 链路，以真实测试状态和独立 Review 作为完成门槛。
+
+- **看架构：** [运行链路与模块职责](docs/architecture.md)、[技术取舍](docs/technical-decisions.md)。
+- **看实测：** [完整 Demo 报告](artifacts/demo/demo-20260814T065211Z-30db19/report.json)、
+  [实际代码 Diff](artifacts/demo/demo-20260814T065211Z-30db19/git.diff)、
+  [Context 优化前后 Token 对比](artifacts/demo/demo-20260814T065211Z-30db19/token-comparison.json)。
+- **看边界：** [安全与数据说明](SECURITY.md)、[原始提交历史说明](docs/repository-history.md)。
+
+保留的一次同场景对比中，总 Token 从 109,704 降到 73,291（减少 33.19%）；这是小型合成
+登录 Bug 的单次对比，不代表通用任务成功率或普遍成本收益。三任务评估也只是固定小样本验证。
+项目适合本地工程演示，不提供操作系统级 Sandbox，也不应承载不可信仓库或生产凭据。
+2026-09-17 依赖扫描仍有未修复的已知漏洞，详见 [依赖审计](SECURITY.md#dependency-audit-2026-09-17)；测试通过不代表安全上线。
+
 RepoPilot is a compact multi-agent coding agent for real repositories. A Main agent coordinates a
 read-only Explorer and an independent Reviewer, makes bounded edits, runs and repairs tests, keeps
 the repository index current, extracts durable memory, and persists checkpoints and traces.
@@ -13,7 +27,7 @@ retrieval, memory lifecycle, context selection, safety policy, local trace, and 
 - **Three isolated roles.** Main owns edits and tests; Explorer owns read-only investigation;
   Reviewer independently inspects the final diff and evidence. Specialist boundaries use typed
   `ExplorationReport` and `ReviewReport` results.
-- **Production hybrid RAG.** Normalized BGE-M3 embeddings feed pgvector cosine search with an HNSW
+- **Hybrid code retrieval.** Normalized BGE-M3 embeddings feed pgvector cosine search with an HNSW
   index. PostgreSQL full-text search supplies keyword recall, RRF fuses both rank lists, and
   `BAAI/bge-reranker-base` performs true CrossEncoder second-stage ranking before Top-K selection.
 - **Unified PostgreSQL storage.** Repository and memory embeddings use pgvector; PostgreSQL also
@@ -83,11 +97,19 @@ enter `repository`, `knowledge`, and `infrastructure` only when the workflow cal
 
 Python 3.12+, Git, and ripgrep are required.
 
+Start from a fresh checkout. Use your own provider credentials and PostgreSQL instance;
+paths in archived reports are anonymized examples, not installation prerequisites.
+
 ```powershell
 cd D:\demo-projects\codeAgent
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+$env:Path = "$PWD\.venv\Scripts;$env:Path"
 ```
+
+If `.env` does not already exist, copy `.env.example` to `.env` and replace its placeholders.
+Use the provider's currently available model ID. The recorded historical model name is not an
+availability guarantee. Never commit the populated `.env` file.
 
 RepoPilot requires PostgreSQL with the `vector` extension for all durable state and retrieval:
 
@@ -125,6 +147,17 @@ the returned Pydantic object.
 
 ```powershell
 .\.venv\Scripts\repopilot.exe doctor
+.\.venv\Scripts\repopilot.exe demo
+```
+
+`doctor` reports configuration and executable availability; it does not connect to the database
+or validate the provider key. `demo` makes real provider calls, creates an independent Git baseline
+in a fresh copy of `demo/bug_repo`, and saves its report, trace, diff, and independent test output.
+It works without nested `.git` directories or a globally configured Git commit identity.
+
+To work on your own trusted repository:
+
+```powershell
 .\.venv\Scripts\repopilot.exe index --workspace D:\path\to\repository
 .\.venv\Scripts\repopilot.exe run --workspace D:\path\to\repository `
   "Fix the login endpoint returning HTTP 500 for an unknown user and add a regression test."
@@ -150,13 +183,15 @@ repopilot mcp-demo                       Read Issue 101 via stdio MCP, then fix 
 ```
 
 Use `repopilot COMMAND --help` for options. `--allow-dangerous` is an explicit per-run opt-in for
-otherwise blocked shell syntax; it does not remove workspace path boundaries.
+otherwise blocked shell syntax. File tools validate workspace paths, but shell programs execute
+with the current user's permissions; their subprocesses are not confined by those file checks.
 
 ## Runtime workflow
 
 1. Incrementally synchronize the repository index.
 2. Retrieve relevant long-term memory and hybrid RAG context.
-3. Workflow runs Explorer with isolated read-only context and receives a structured report.
+3. Main first produces an initial plan; Workflow then runs Explorer with isolated read-only
+   context and receives a structured report.
 4. Workflow returns the report to Main, which reads files and applies exact, stale-safe edits.
 5. Each changed path is immediately re-indexed.
 6. Main runs tests; failures return bounded diagnostic evidence and increment retry state.
@@ -239,7 +274,8 @@ stdio MCP transport, Eval isolation, checkpoints, and local trace evidence.
 - Exact replacements fail on stale or ambiguous occurrence counts.
 - Explorer and Reviewer never receive editing or general shell tools.
 - Mutation-like tools are filtered from the optional GitHub MCP connection.
-- Secrets are excluded from local trace details and sensitive SDK trace payloads are disabled.
+- Sensitive SDK trace payloads are disabled. Session history and local outputs can still contain
+  source code or tool text; review any new exported traces before sharing them.
 
 Local command filtering is defense in depth, not a VM-grade sandbox. Run RepoPilot only against
 repositories and commands you trust.

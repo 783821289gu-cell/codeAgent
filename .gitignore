@@ -12,3 +12,15 @@ build/
 .env.*
 !.env.example
 .repopilot/
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.pem
+*.key
+# Personal study material remains local; public architecture docs live in docs/.
+/框架.md
+/优化点.md
+/codeAgent_项目架构拆解_Agent技术栈视角.pdf
+# Preserve the curated, already-tracked evidence; do not publish new runs by default.
+/artifacts/

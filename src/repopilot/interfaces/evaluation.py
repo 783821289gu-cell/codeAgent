@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import shutil
 import subprocess
 import sys
 import time
@@ -17,6 +16,7 @@ from pydantic import AliasChoices, BaseModel, Field, field_validator
 
 from repopilot.core.models import TaskOutcome, TaskStatus, TraceEvent
 from repopilot.infrastructure.postgres import CheckpointStore, TraceStore
+from repopilot.interfaces.workspace import prepare_workspace
 from repopilot.repository.tools import WorkspaceTools
 
 if TYPE_CHECKING:
@@ -188,11 +188,7 @@ class EvalRunner:
         case_dir = run_dir / case.id
         workspace = case_dir / "workspace"
         baseline = self._resolve_baseline(case.baseline_repo)
-        shutil.copytree(
-            baseline,
-            workspace,
-            ignore=shutil.ignore_patterns(".repopilot", ".pytest_cache", "__pycache__"),
-        )
+        prepare_workspace(baseline, workspace)
         before = _repository_snapshot(workspace)
         pilot = self.pilot_factory(workspace)
         task_id = f"eval-{case.id}-{uuid4().hex[:8]}"
